@@ -33,7 +33,8 @@ public class Main {
             System.out.println("\n--- MENU PRINCIPAL ---");
             System.out.println("1. Cadastrar Carro");
             System.out.println("2. Cadastrar Moto");
-            System.out.println("3. Listar Frota Completa (Polimorfismo)");
+            System.out.println("3. Cadastrar Caminhao");
+            System.out.println("4. Listar Frota Completa (Polimorfismo)");
             System.out.println("0. Sair");
             System.out.print("> Escolha uma opção: ");
 
@@ -43,7 +44,8 @@ public class Main {
                 switch (opcao) {
                     case 1 -> cadastrarCarro(scanner);
                     case 2 -> cadastrarMoto(scanner);
-                    case 3 -> listarFrota();
+                    case 3 -> cadastrarCaminhao(scanner);
+                    case 4 -> listarFrota();
                     case 0 -> System.out.println("Encerrando a aplicação...");
                     default -> System.out.println("Opção inválida!");
                 }
@@ -99,6 +101,14 @@ public class Main {
             System.err.println("Erro de Banco de Dados: " + e.getMessage());
         } catch (NumberFormatException e) {
             System.err.println("Entrada inválida: Certifique-se de digitar números para Ano/Cilindradas.");
+        }
+    }
+
+    private static void cadastrarCaminhao(Scanner scanner) {
+        try {
+            System.out.print("Marca:");
+            String marca = scanner.nextLine();
+            System
         }
     }
 
